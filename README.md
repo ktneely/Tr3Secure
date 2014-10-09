@@ -22,9 +22,10 @@ or
 
 tr3-collect-user.bat [path to store collected data] [user profile name]
 
-***** note ******
+note 
+******
 the executables' names in the tools folder has to match the names of the executables listed below. If they don't match then the script won't work properly
-***** note ******
+******
 
 
 Batch Script Configuration
@@ -51,7 +52,7 @@ Batch Script Configuration
 	rawcopy.exe 			http://code.google.com/p/mft2csv/downloads/list (ensure you have both RawCopy64.exe and RawCopy.exe)
 	
 #### Forensic Imaging Memory Related
-	winpmem acquisition tool  Located at http://code.google.com/p/volatility/downloads/list **rename binary to winpmem.exe ***
+	winpmem acquisition tool  Located at http://code.google.com/p/volatility/downloads/list *rename binary to winpmem.exe*
 	
 #### Networking Information Related
 	arp.exe:             Located in Windows\System32 folder
@@ -100,4 +101,9 @@ Batch Script Configuration
 	whoami: Included in Windows OS on Windows 7
 	
 #### Malware scanning
+     These tools should be placed in the scan/ directory under the scripts
+
+     tdsskiller.exe:	Located at http://media.kaspersky.com/utilities/VirusUtilities/EN/tdsskiller.exe
+     stinger32.exe:	Located at http://www.mcafee.com/us/downloads/free-tools/stinger.aspx
      stinger64.exe:	Located at http://www.mcafee.com/us/downloads/free-tools/stinger.aspx
+     Claimwin Portable:	*Extract this to a folder called 'ClamWin' under teh scan directory* Located at http://portableapps.com/apps/utilities/clamwin_portable     
