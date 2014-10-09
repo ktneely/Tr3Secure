@@ -39,7 +39,7 @@ Batch Script Configuration
 ### Dependencies
 
 
-Script Operating Related
+#### Script Operating Related
 	mkdir.exe:           Included in UnxUtils package and located at http://unxutils.sourceforge.net/
 	robocopy.exe:        Included in the Windows 2003 resource tool kit and located at http://www.microsoft.com/download/en/details.aspx?id=17657
 	whoami: 			 Included in Windows OS on Windows 7
@@ -47,10 +47,10 @@ Script Operating Related
 	schtasks.exe         Included in Windows OS on Windows 7
 	driverquery.exe      Included in Windows OS on Windows 7
 	
-Offline Data
+#### Offline Data
 	rawcopy.exe 			http://code.google.com/p/mft2csv/downloads/list (ensure you have both RawCopy64.exe and RawCopy.exe)
 	
-Forensic Imaging Memory Related
+#### Forensic Imaging Memory Related
 	winpmem acquisition tool  Located at http://code.google.com/p/volatility/downloads/list **rename binary to winpmem.exe ***
 	
 #### Networking Information Related
@@ -67,7 +67,6 @@ Forensic Imaging Memory Related
 	listdlls.exe:        Located at http://technet.microsoft.com/en-us/sysinternals/bb896656
 	openports.exe:       Located at http://majorgeeks.com/OpenPorts_d3950.html
 	pslist.exe:          Included in Sysinternals PSTools and located at http://technet.microsoft.com/en-us/sysinternals/bb896649.aspx
-	pv.exe:              Located at http://www.teamcti.com/pview/prcview.htm
 	tasklist.exe:        Located in Windows\System32 folder
 	tcpvcon.exe:         Located at http://technet.microsoft.com/en-us/sysinternals/bb897437
 	
@@ -76,27 +75,29 @@ Forensic Imaging Memory Related
 	net.exe:             Located in Windows\System32 folder
 	logonsessions.exe:   Located at http://technet.microsoft.com/en-us/sysinternals/bb896769
 
-Opened Files Information
+#### Opened Files Information
 	openedfilesview.exe: Located at http://www.nirsoft.net/utils/opened_files_view.html
 	psfile.exe:          Included in Sysinternals PSTools and located at http://technet.microsoft.com/en-us/sysinternals/bb896649.aspx
 
-Misc Information
+#### Misc Information
 	pclip.exe:           Included in UnxUtils package and located at http://unxutils.sourceforge.net/
 
-System Information
+#### System Information
 	ver.exe:             Included in Windows OS
 	uptime.exe:          Located at http://support.microsoft.com/kb/232243
 	ipconfig.exe:        Located in Windows\System32 folder
 	urlprotocolview.exe: Located at http://www.nirsoft.net/utils/url_protocol_view.html
 	promiscdetect.exe:   Located at http://ntsecurity.nu/toolbox/promiscdetect/
 	
-Non-Volatile System Information
+#### Non-Volatile System Information
 	autorunsc.exe:       Located at http://technet.microsoft.com/en-us/sysinternals/bb963902
 	gplist.exe:          Located at http://ntsecurity.nu/toolbox/gplist/
 	gpresult.exe:        Included in Windows OS
 	dd.exe		     Included in UnxUtils package and located at http://unxutils.sourceforge.net/
 	mmls.exe (also copy zlib1.dll and libewf.dll along with mmls.exe into the tools folder) Located at http://www.sleuthkit.org/sleuthkit/download.php
 
-Admin Error Check
+#### Admin Error Check
 	whoami: Included in Windows OS on Windows 7
 	
+#### Malware scanning
+     stinger64.exe:	Located at http://www.mcafee.com/us/downloads/free-tools/stinger.aspx

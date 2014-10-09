@@ -250,13 +250,6 @@ cls
 			echo %DATE% %TIME% - Running %WINDIR%\System32\tasklist.exe on %COMPUTERNAME% to obtain the running processes including memory usage
 			echo %DATE% %TIME% - Running %WINDIR%\System32\tasklist.exe on %COMPUTERNAME% to obtain the running processes including memory usage >> %c_drive%:\Data-%case%\Collection.log	
 			%WINDIR%\System32\tasklist.exe >> %vol_outpath%\ProcessInfo_1_running-processes-memory-usage.txt
-		:: Listing the processes to exe mapping
-		:: pv.exe -e reference: Malware Forensics page 37
-			echo Command Executed: pv.exe -e > %vol_outpath%\ProcessInfo_2_process-to-exe-mapping.txt
-			echo: >> %vol_outpath%\ProcessInfo_2_process-to-exe-mapping.txt
-			echo %DATE% %TIME% - Running tools\pv.exe -e on %COMPUTERNAME% to obtain the processes to exe mapping
-			echo %DATE% %TIME% - Running tools\pv.exe -e on %COMPUTERNAME% to obtain the processes to exe mapping >> %c_drive%:\Data-%case%\Collection.log	
-			tools\pv.exe -e >> %vol_outpath%\ProcessInfo_2_process-to-exe-mapping.txt
 		:: Listing the processes to user mapping
 		:: cprocess.exe  /stext reference: Malware Forensics page 38
 			echo %DATE% %TIME% - Running tools\cprocess.exe  /stext on %COMPUTERNAME% to obtain the processes to user mapping
@@ -746,7 +739,10 @@ cls
 				:: /copy:DAT copy file data and timestamps /r:0  retry 0 times,
 				:: /ts source timestamps in log, /FP displays full pathnames in output, /E copy subfolders
 				:: /np progress indicator turned off and /log  creates log file by overwriting one if already exists
-				tools\robocopy.exe %SYSTEMDRIVE%\ProgramData\McAfee\Virusscan\Quarantine %nonvol_outpath%\logs\McAfee\Quarantine /ZB /copy:DAT /r:0 /ts /FP /np /E /log:%nonvol_outpath%\logs\McAfee\quarantine-robocopy-log.txt
+			:: McAfee logs
+			::	tools\robocopy.exe %SYSTEMDRIVE%\ProgramData\McAfee\Virusscan\Quarantine %nonvol_outpath%\logs\McAfee\Quarantine /ZB /copy:DAT /r:0 /ts /FP /np /E /log:%nonvol_outpath%\logs\McAfee\quarantine-robocopy-log.txt
+			:: Malicious Software Removal Toolkit logs
+			tools\robocopy.exe /ZB /copy:DAT /r:0 /ts /FP /np /E %SystemRoot%\debug\mrt.log %nonvol_outpath%\logs\Microsoft\
 			)
 	:: Collecting the group policy information applied to the system
 		echo %DATE% %TIME% - Collecting group policy information from %COMPUTERNAME%
